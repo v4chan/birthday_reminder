@@ -1,0 +1,69 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<title>Logging In</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<style>
+			html, body{
+				background-color: red;
+			}
+			.auth_form{
+				text-align: center;
+				color: black;
+				width: 38%;
+				border: 5px solid;
+				margin: auto;
+				margin-top: 8%;
+			}	
+			#submit_login{
+				margin-bottom: 20px;
+			}
+			#client_id{
+				width: 80%;
+				margin: auto;
+			}
+			#url{
+				width: 80%;
+				margin: auto;
+			}
+		</style>
+		<script>
+			function login(){
+				document.getElementById("spinner").style.visibility="visible";
+				var client_id = document.getElementById("client_id").value;
+				var url = document.getElementById("url").value;
+				window.location.href="https://drchrono.com/o/authorize/?redirect_uri=" + url + "&response_type=code&client_id=" + client_id;
+			}
+		</script>
+	</head>
+
+	<body>
+		<form role="form" class="auth_form">
+			<h1>Enter DrChrono login credentials:</h1>
+			<h6>Please enter the fields that you created in the DrChrono API web application. You will then be redirected to DrChrono's authorize URL</h6>
+			<div class="form-group">
+				<label for="client_id">Client ID:</label>
+				<input class="form-control" id="client_id">
+			</div>
+			<div class="form-group">
+				<label for="url">Redirect URI:</label>
+				<input class="form-control" id="url">
+			</div>
+			<div class="btn btn-default" id="submit_login" onclick="login()">Submit</div>
+		</form>
+		<div class="text-center">
+			<i class="fa fa-spinner fa-spin" id="spinner" style="font-size: 120px; margin-top: 10px; color: black; visibility: hidden;"></i>
+		</div>
+	</body>
+
+</html>
+

@@ -1,0 +1,26 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<title>Birthday Reminder Sent</title>
+		<meta charset="utf-8">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	  	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="{% static 'bday_reminder/style.css' %}" />
+
+	</head>
+
+	<body id="sent_reminders">
+
+		<div class="birthday_reminder_msg">
+			<h1 class="birthday_reminder">{{ message }}</h1>
+			<button class="btn btn-default" id="back_button" onclick="location.href='/bday_reminder/profile'">Click here to go back</button>
+		</div>
+	</body>
+
+</html>

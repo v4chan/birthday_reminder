@@ -1,0 +1,80 @@
+.patient_info {
+	text-align: left;
+	font-size: 36px;
+	font-weight: bold;
+}
+
+#bday_button {
+	margin-top: 1%;
+	float: right;
+}
+
+#add_button {
+	margin-top: 1%;
+	float: right;
+	margin-right: 1%;
+}
+
+#sent_reminders {
+	background: url(images/birthday.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.birthday_reminder {
+	font-family: Impact;
+	color: white;
+	font-size: 65px;
+}
+
+#back_button {
+	font-size: 20px;
+	margin-top: 5%;
+}
+
+.birthday_reminder_msg{
+	width: 60%;
+	text-align: center;
+	margin-right: 50%;
+	margin-top: 15%;
+}
+
+.pic{
+     margin-top:50px; 
+     width:120px;
+     margin-left:50px;
+     margin-bottom:-60px;
+     border: 5px solid;
+}
+
+.panel{
+	background-color: #ededed;
+}
+
+.name{
+    position:absolute;
+    padding-left:200px;
+    font-size:30px;
+}
+
+.fa-spin {
+    -webkit-transform-origin: 50% calc(50% - .5px);
+    transform-origin: 50% calc(50% - .5px);
+    font-size: 200px;
+    visibility: hidden;
+    vertical-align: center;
+    color: black;
+}
+
+.spinner_container{
+	display: table-cell;
+    vertical-align: middle;
+}
+
+#loading_msg{
+	visibility: hidden;
+	color:black;
+}
+
