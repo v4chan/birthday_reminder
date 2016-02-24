@@ -1,0 +1,7 @@
+Django==1.9.2
+django-braces==1.8.1
+oauthlib==1.0.3
+pytz==2015.7
+requests==2.9.1
+six==1.10.0
+wheel==0.26.0
